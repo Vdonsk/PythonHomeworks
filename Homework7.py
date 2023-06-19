@@ -39,12 +39,12 @@
 6 12 18 24 30 36
 '''
 
-print(f'Ввод: print_operation_table(lambda x, y: x * y)')
+# print(f'Ввод: print_operation_table(lambda x, y: x * y)')
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
-    print(f'Вывод: ')
-    for i in a:
-        print(*[f'{x:>3}' for x in i])
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+#     print(f'Вывод: ')
+#     for i in a:
+#         print(*[f'{x:>3}' for x in i])
 
-print_operation_table(lambda x, y: x * y)
+# print_operation_table(lambda x, y: x * y)
