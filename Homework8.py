@@ -5,16 +5,13 @@ def input_dataset():
     return surname, name, phone
 
 def controller():
-    mode = int(input('Выберите режим: 1 - поиск контакта, 2 - добавить контакт: '))
+    mode = int(input('Выберите режим:\n1 - поиск контакта\n2 - добавить контакт\nВведите режим: '))
     if mode == 1:
         surname = inp_surname()
         find_person(surname)
-    elif mode == 2:
+    if mode == 2:
         dataset = input_dataset()
         write_person(dataset)
-    else:
-        print('Такого режима не существует')
-        controller()
 
 def find_person(surname: str):
     with open('PythonHomeworks\phone.txt', 'r', encoding='utf-8') as file:
@@ -23,10 +20,10 @@ def find_person(surname: str):
             if line_list[ind] == surname.title():
                 print(line_list[ind])
                 print(line_list[ind + 1])
-                print(line_list[ind + 2])             
-                
+                print(line_list[ind + 2])                       
+
 def inp_surname():
-    surname = input('Введите фамилию для поиска контакта: ')
+    surname = input('Поиск по фамилии: ')
     return surname
 
 def write_person(dataset: tuple):
